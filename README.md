@@ -63,7 +63,7 @@ Start the server
 
 ## Demo
 
-Insert gif or link to demo
+https://xgifsx-app.netlify.app/
 
 
 ## Authors
