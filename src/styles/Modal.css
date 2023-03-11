@@ -1,0 +1,31 @@
+.modal-gif{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    width: 100svw;
+    height: 100vh;
+    height: 100svh;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+.modal-box{
+    display: flex;
+    flex-direction: column;
+}
+.modal-gif i{
+    font-size: 30px;
+    color: #fff;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .modal-box img{
+        max-width: 300px;
+    }
+}

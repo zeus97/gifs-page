@@ -1,0 +1,21 @@
+.gifs-c{
+    width: 100%;
+    min-height: calc(100vh - 230px);
+    min-height: calc(100svh - 230px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5e5f7;
+    opacity: 0.9;
+    background: var(--bg-pattern);
+    
+}
+.gifs-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin-top: 10px;
+}
+

@@ -1,0 +1,60 @@
+.browser-c{
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url('../images/image2.jpg');
+    background-size: cover;
+
+}
+.browser-c h1{
+    font-size: 6rem;
+    color: var(--white);
+    text-shadow: -2px 2px 3px var(--black);
+    user-select: none;
+}
+.browser-c form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.browser-c input{
+    font-size: 1.2rem;
+    padding: 10px;
+    height: 40px;
+    width: 380px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.browser-c input:focus{
+    box-shadow: 0 0 10px 5px #333333;
+    
+}
+.browser-c i {
+    font-size: 35px;
+    margin-left: 10px;
+    color: var(--black);
+    cursor: pointer;
+}
+.browser-c i:hover{
+    color: var(--green);
+}
+.browser-c button{
+    border: none;
+    background: none;
+}
+
+@media screen and (max-width:768px){
+    .browser-c input{
+        width: 280px;
+    }
+    .browser-c h1{
+        font-size: 4rem;
+    }
+    .browser-c i{
+        font-size: 25px;
+    }
+}

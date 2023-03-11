@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --yellow: #ffdd1a;
+  --orange:#ff661f;
+  --white:#fffdfd;
+  --black:#080808;
+  --green: #7cdf4e;
+  --bg-pattern: repeating-linear-gradient( 45deg, var(--green), var(--green) 4.5px, #e5e5f7 4.5px, #e5e5f7 22.5px );
+}

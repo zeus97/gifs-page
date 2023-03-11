@@ -1,0 +1,13 @@
+.gif{
+    margin: 10px;
+}
+.gif img{
+    box-shadow: 0 0 20px #ffffff8e ;
+    max-width: 280px;
+    max-height: 250px;
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+.gif img:hover{
+    box-shadow: 0 0 20px #000000dc ;
+}
