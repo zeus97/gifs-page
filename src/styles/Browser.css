@@ -15,6 +15,7 @@
     text-shadow: -2px 2px 3px var(--black);
     user-select: none;
 }
+
 .browser-c form{
     display: flex;
     justify-content: center;
