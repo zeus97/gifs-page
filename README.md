@@ -31,7 +31,7 @@ We are not affiliated with Gfycat in any way, and this repository is not officia
 ## Features
 
 - Live preview
-- Responsive
+- Responsive design
 
 
 ## Run Locally
