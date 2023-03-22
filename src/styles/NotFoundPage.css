@@ -43,7 +43,10 @@
 }
 
 @media screen and (max-width: 650px){
+    .Notfound-page{
+        justify-content: center;
+    }
     .Notfound-page img{
-        width: 350px;
+        width: 90%;
     } 
 }

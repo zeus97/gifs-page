@@ -105,6 +105,7 @@ function GifContainer({openModal}:Props) {
         <Browser
         search={handleSearchGifs} />
         <div className='gifs-c'>
+
           <div className='gifs-box'>
             {gifs.length < 1 ?
                 <h1>Loading...</h1>

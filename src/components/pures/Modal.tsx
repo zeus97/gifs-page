@@ -3,13 +3,12 @@ import '../../styles/Modal.css';
 
 interface Props{
     url:string,
-    closeModal: ()=> void,
-    position: number
+    closeModal: ()=> void
 }
 
-function Modal({url, position, closeModal}:Props) {
+function Modal({url, closeModal}:Props) {
   return (
-        <div className='modal-gif' style={{top : `${position}px`}}>
+        <div className='modal-gif'>
             <div className='modal-box'>
                 <i className="bi bi-x-lg" onClick={closeModal}></i>
                 <img src={url} alt='gifxxx' />

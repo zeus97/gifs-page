@@ -15,7 +15,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     width: 80%;
     margin-top: 10px;
+}
+
+
+@media screen and (max-width:767px){
+    .gifs-box{
+        width: 100%;
+    }
 }
 

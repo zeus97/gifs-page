@@ -27,8 +27,8 @@ function Pagination({ gifsPerPage, totalGifs, activePage, paginate, previousPage
             <a href='#home'><li onClick={previousPage} className="page-number">
                {'<'}
             </li></a>
-             {pageNumbers.map((number) => (
-               <a href='#home'> <li
+             {pageNumbers.map((number, index) => (
+               <a href='#home' key={index}> <li
                    key={number}
                    onClick={() => paginate(number)}
                    className={activePage == number ? 'page-number active-page' : 'page-number'}
