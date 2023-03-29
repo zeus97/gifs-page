@@ -5,6 +5,7 @@ import '../../styles/GifContainer.css';
 import Browser from '../pures/Browser';
 import Pagination from '../pures/Pagination';
 import Gif from '../pures/Gif';
+import Spinner from 'react-bootstrap/Spinner';
 
 //API requests
 import { getToken, getTrendingGifs, searchGifs } from '../../services'
@@ -23,6 +24,7 @@ function GifContainer({openModal}:Props) {
     const [gifs, setGifs] = useState<IGif[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [gifsPerPage] = useState<number>(10);
+    const [search, setSearch] = useState<string>('Trending')
   
 
     //Pagination variables
@@ -32,7 +34,7 @@ function GifContainer({openModal}:Props) {
     
 
     //Functions
-    const handleSearchGifs = (gif:string)=>{
+    const handleSearchGifs  = (gif:string)=>{
       let token = sessionStorage.getItem('token');
       if(token){
         searchGifs(gif,token).then((res)=>{
@@ -43,7 +45,9 @@ function GifContainer({openModal}:Props) {
                         url:el.max1mbGif
                          }
           })
-          setGifs(Gifs);
+          setSearch(gif);
+          setGifs([]);
+          setTimeout(()=>{setGifs(Gifs);},700); 
           setCurrentPage(1);}).catch((error)=>{`[Searching Gif ERROR]: ${error}`})
 
       }else{
@@ -85,7 +89,7 @@ function GifContainer({openModal}:Props) {
                         url:el.max1mbGif
                     }
                 })
-                setGifs(TrendingGifs)})
+              setGifs(TrendingGifs);})
             .catch((error)=>{console.log(`[Trending Gifs ERROR]: ${error}`)})
             
         }
@@ -105,10 +109,10 @@ function GifContainer({openModal}:Props) {
         <Browser
         search={handleSearchGifs} />
         <div className='gifs-c'>
-
+          <h1 className='gifs-search-title'>Results: <span>{search}</span></h1>
           <div className='gifs-box'>
             {gifs.length < 1 ?
-                <h1>Loading...</h1>
+                <Spinner className='loading-spinner' animation="border" variant="light" />
                 :
                 currentGifs.map((gif,index)=>{
                     return (
@@ -121,7 +125,6 @@ function GifContainer({openModal}:Props) {
                 })
             }
           </div>
-
             <Pagination
                   gifsPerPage={gifsPerPage}
                   totalGifs={gifs.length}

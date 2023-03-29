@@ -1,8 +1,9 @@
 .App{
-    width: 100vw;
-    width: 100svw;
+    width: 100%;
     min-height: 100vh;
+    min-height: 100svh;
 }
+
 .blur-filter{
     filter: blur(2px);
 }

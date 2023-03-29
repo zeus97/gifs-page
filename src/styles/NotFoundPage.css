@@ -3,11 +3,12 @@
     height: 100vh;
     height: 100svh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #e5e5f7;
     opacity: 0.9;
-    background: var(--bg-pattern);
+    background-image: url('../images/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
    
 }
 .Notfound-page-box{
@@ -15,38 +16,37 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-}
-
-.Notfound-page h2{
-    font-size: 2rem;
-    color: var(--black);
     position: relative;
-    bottom: 50px;
-    
+}
+.Notfound-page span{
+    font-size: 2rem;
+    color: var(--white);
+    position: absolute;
+    top: 3%;
+    margin-right: 20px;
 }
 
 .Notfound-page button {
-    font-size: 1.2rem;
+    font-size: 2rem;
     border-radius: 20px;
-    color: var(--black);
-    background-color: #50FF46;
-    border: 2px solid var(--black);
+    color: var(--white);
+    text-shadow: 0 0 1px #000,0 0 1px #000,0 0 1px #000;
+    background: var(--gradient);
+    border: none;
     padding: 16px 32px;
     cursor: pointer;
 }
 .Notfound-page button:hover{
-    background-color: var(--green);
+    background: -webkit-linear-gradient(135deg, rgb(72, 181, 248) 0%, rgb(201, 72, 252) 100%);
+    box-shadow: 0 0 20px rgba(172, 153, 255, 0.452) ;
 }
 .Notfound-page img{
-    width: 600px;
+    margin-bottom: 50px;
+    width: 500px;
 }
 
 @media screen and (max-width: 650px){
-    .Notfound-page{
-        justify-content: center;
-    }
     .Notfound-page img{
-        width: 90%;
+        width: 80%;
     } 
 }

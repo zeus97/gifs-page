@@ -3,14 +3,20 @@
     min-height: calc(100vh - 230px);
     min-height: calc(100svh - 230px);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: space-between;
     align-items: center;
-    background-color: #e5e5f7;
-    opacity: 0.9;
-    background: var(--bg-pattern);
-    
+    background-color: var(--black);
 }
+.gifs-search-title{
+    align-self: flex-start;
+    margin-left: 20vw;
+    font-size: 3rem;
+    background:var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .gifs-box{
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +25,7 @@
     width: 80%;
     margin-top: 10px;
 }
+
 
 
 @media screen and (max-width:767px){

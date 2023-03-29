@@ -23,7 +23,7 @@ function HomePage() {
 
   return (
     <>
-      <div className={modal ? 'blur-filter' : ''}> 
+      <div className={modal ? 'blur-filter' : ''} style={{width: '100%'}}> 
         
           <GifContainer
           openModal={openModal}/>

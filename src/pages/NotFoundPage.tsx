@@ -11,7 +11,7 @@ function NotFoundPage() {
     <div className='Notfound-page'>
         <div className='Notfound-page-box'>
             <img src={NotFoundImage} />
-            <h2>This page doesn't exist.</h2>
+            <span>- 404 Error -</span>
             <button onClick={()=>{navigate('/')}}>Go back home</button>
         </div>
     </div>

@@ -7,14 +7,13 @@
     height: 180px;
 }
 .gif img{
-    box-shadow: 0 0 20px #ffffff8e ;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    
     cursor: zoom-in;
 }
 .gif img:hover{
-    box-shadow: 0 0 20px #000000dc ;
+    box-shadow: 0 0 20px rgba(172, 153, 255, 0.452) ;
 }
 
 @media screen and (max-width:767px){
