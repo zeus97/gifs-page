@@ -32,5 +32,9 @@
     .gifs-box{
         width: 100%;
     }
+    .gifs-search-title{
+        margin-left: 10vw;
+        font-size: 2rem;
+    }
 }
 

@@ -19,6 +19,8 @@ interface Props{
 
 function GifContainer({openModal}:Props) {
 
+  
+
 
     //State variables
     const [gifs, setGifs] = useState<IGif[]>([]);
@@ -30,7 +32,7 @@ function GifContainer({openModal}:Props) {
     //Pagination variables
     const indexOfLastGif = currentPage * gifsPerPage;
     const indexOfFirstGif = indexOfLastGif - gifsPerPage;
-    const currentGifs = gifs.slice(indexOfFirstGif, indexOfLastGif);
+    const currentGifs: IGif[] = gifs.slice(indexOfFirstGif, indexOfLastGif);
     
 
     //Functions

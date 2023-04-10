@@ -3,7 +3,3 @@
     min-height: 100vh;
     min-height: 100svh;
 }
-
-.blur-filter{
-    filter: blur(2px);
-}

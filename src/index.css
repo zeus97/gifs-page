@@ -13,5 +13,4 @@
   --black:#141414;
   --green: #7cdf4e;
   --gradient:  -webkit-linear-gradient(135deg, rgba(93,192,255,1) 0%, rgba(208,88,255,1) 100%);
-  --bg-pattern: repeating-linear-gradient( 45deg, var(--green), var(--green) 4.5px, #e5e5f7 4.5px, #e5e5f7 22.5px );
 }
