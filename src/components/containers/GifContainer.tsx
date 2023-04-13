@@ -7,6 +7,11 @@ import Pagination from '../pures/Pagination';
 import Gif from '../pures/Gif';
 import Spinner from 'react-bootstrap/Spinner';
 
+//Redux
+import { useSelector, useDispatch } from 'react-redux';
+import { setGifs } from '../../features/gifs/gifsSlice';
+import { RootState } from '../../app/store';
+
 //API requests
 import { getToken, getTrendingGifs, searchGifs } from '../../services'
 
@@ -19,11 +24,11 @@ interface Props{
 
 function GifContainer({openModal}:Props) {
 
-  
+  const gifs = useSelector((state: RootState) => state.gifs.value)
+  const dispatch = useDispatch()
 
 
     //State variables
-    const [gifs, setGifs] = useState<IGif[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [gifsPerPage] = useState<number>(10);
     const [search, setSearch] = useState<string>('Trending')
@@ -48,8 +53,8 @@ function GifContainer({openModal}:Props) {
                          }
           })
           setSearch(gif);
-          setGifs([]);
-          setTimeout(()=>{setGifs(Gifs);},700); 
+          dispatch(setGifs([]));
+          setTimeout(()=>{dispatch(setGifs(Gifs));},700); 
           setCurrentPage(1);}).catch((error)=>{`[Searching Gif ERROR]: ${error}`})
 
       }else{
@@ -91,7 +96,7 @@ function GifContainer({openModal}:Props) {
                         url:el.max1mbGif
                     }
                 })
-              setGifs(TrendingGifs);})
+              dispatch(setGifs(TrendingGifs));})
             .catch((error)=>{console.log(`[Trending Gifs ERROR]: ${error}`)})
             
         }

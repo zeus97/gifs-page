@@ -4,7 +4,6 @@
     min-height: calc(100svh - 230px);
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;
     align-items: center;
     background-color: var(--black);
 }
@@ -25,7 +24,9 @@
     width: 80%;
     margin-top: 10px;
 }
-
+.loading-spinner{
+    margin-top: 50px;
+}
 
 
 @media screen and (max-width:767px){
