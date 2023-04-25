@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../styles/Browser.css';
 
 interface Props{
@@ -8,6 +8,12 @@ interface Props{
 function Browser({search}:Props) {
 
     const [gif, setGif] = useState<string>('');
+    const [remove, setRemove] = useState<boolean>(false);
+
+    useEffect(()=>{
+        if(gif.length > 0){setRemove(true);}
+        else{setRemove(false);}
+    },[gif])
 
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
@@ -21,14 +27,28 @@ function Browser({search}:Props) {
         e.preventDefault();
         setGif(e.target.value);
     }
+
+    const removeText = ()=>{
+        setGif('');
+    }
     
 
   return (
     <div className='browser-c'>
         <h1 id='home'>xGIFsx</h1>
         <form onSubmit={handleSubmit}>
-            <input type='text' name='gif' id='gif' placeholder='Type something' value={gif} onChange={handleChange} />
-            <button><i className="bi bi-search"></i></button>
+            <input type='text'
+             name='gif'
+             id='gif'
+             placeholder='Type something'
+             value={gif}
+             onChange={handleChange} />
+            { remove ?
+             <i className="bi bi-x-lg remove-icon"
+             onClick={removeText}
+             >
+             </i> : null}
+            <button type='submit'><i className="bi bi-search search-icon"></i></button>
         </form>
     </div>
   )

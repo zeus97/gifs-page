@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, Suspense} from 'react'
 import '../../styles/GifContainer.css';
 
 //Components
@@ -118,6 +118,7 @@ function GifContainer({openModal}:Props) {
         <div className='gifs-c'>
           <h1 className='gifs-search-title'>Results: <span>{search}</span></h1>
           <div className='gifs-box'>
+            <Suspense fallback={<h1>Cargando....</h1>}>
             {gifs.length < 1 ?
                 <Spinner className='loading-spinner' animation="border" variant="light" />
                 :
@@ -131,6 +132,7 @@ function GifContainer({openModal}:Props) {
                     )
                 })
             }
+            </Suspense>
           </div>
             <Pagination
                   gifsPerPage={gifsPerPage}

@@ -22,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .browser-c input{
     font-size: 1.6rem;
@@ -36,7 +37,7 @@
     box-shadow: 0 0 10px 5px rgba(93, 193, 255, 0.568);
     
 }
-.browser-c i {
+.search-icon {
     font-size: 35px;
     margin-left: 10px;
     color: var(--white);
@@ -46,6 +47,13 @@
     background:var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.remove-icon{
+    position: absolute;
+    right: 15%;
+    font-size: 25px;
+    color: var(--black);
+    cursor: pointer;
 }
 .browser-c button{
     border: none;
@@ -59,7 +67,11 @@
     .browser-c h1{
         font-size: 4rem;
     }
-    .browser-c i{
-        font-size: 25px;
+    .search-icon{
+        font-size: 30px;
+    }
+    .remove-icon{
+        font-size: 23px;
+        font-weight: bold;
     }
 }
